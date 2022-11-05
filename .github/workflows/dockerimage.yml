@@ -1,0 +1,31 @@
+name: Dockerimage
+on:
+ push:
+   branches: 
+      - 'master'
+   
+   pull_request:
+   
+    branches: 
+       - 'master'
+    
+   push_to_registries:
+    name: pushdocker image to mutiple registries 
+    
+    runs-on: ubuntu-latest
+    
+    steps:
+      -name: Check out the repo
+       uses: actions/checkout@v2
+       
+      -name: Build and Docker image
+       uses: VaultVulp/gp-docker-action@1.1.7
+       
+       with:
+         
+         github-token:${{ secrets.TOKEN}}#Provide github_token to login into the githubpackages
+         image-name:mydocker #Provide Docker image name
+         image-tag:v1 #Provide Docker image tag
+         
+         
+       
