@@ -1,0 +1,23 @@
+name: Push File
+
+on: push
+
+jobs:
+  copy-file:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Pushes test file
+      uses: bonus83/copy_commit_push_tag@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'cpoy.txt'
+        destination_repo: 'ninanatarajan/office'
+        destination_folder: 'ninanatarajan/office/'
+        user_email: 'nina.nitarajan@gmail.com'
+        user_name: 'ninanatarajan'
+        commit_message: 'A custom message for the commit'
+    commit_tag: 'V2.0'
