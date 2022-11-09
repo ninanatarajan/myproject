@@ -12,7 +12,7 @@ jobs:
     - name: Pushes test file
       uses: bonus83/copy_commit_push_tag@main
       env:
-        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        API_TOKEN_GITHUB: ${{ secrets.key1 }}
       with:
         source_file: 'cpoy.txt'
         destination_repo: 'ninanatarajan/office'
