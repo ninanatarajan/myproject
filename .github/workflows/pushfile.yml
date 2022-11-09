@@ -20,4 +20,4 @@ jobs:
         user_email: 'nina.nitarajan@gmail.com'
         user_name: 'ninanatarajan'
         commit_message: 'A custom message for the commit'
-    commit_tag: 'V2.0'
+        commit_tag: 'V2.0'
